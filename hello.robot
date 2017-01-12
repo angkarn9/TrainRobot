@@ -1,5 +1,6 @@
 *** Settings ***
 Library  Selenium2Library
+Suite Teardown  Close All Browsers
 
 *** Variables ***
 ${URL}  http://www.google.co.th
@@ -22,4 +23,4 @@ Search Google
   Wait Until Element Is Visible  _fZl
   Click Button  _fZl
   Wait Until Page Contains  ${expect}
-  [Teardown]  Close Browser
+  #[Teardown]  Close Browser
