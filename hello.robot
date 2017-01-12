@@ -6,13 +6,13 @@ Suite Teardown  Close All Browsers
 ${URL}  http://www.google.co.th
 ${BROWSER DRIVE}  chrome
 *** Test Cases ***
-Hello Google Search Pizza
-  [Tags]  pizza
-  Search Google  Pizza  พิซซ่า
-
-Google Search KFC
-  [Tags]  kfc
-  Search Google  KFC  kfc.co.th - KFC
+Search Google Foods
+  [Template]    Search Google
+#--------------------------------#
+#- keyword -- | ---- expect  ----#
+#--------------------------------# 
+      Pizza       พิซซ่า
+      KFC         kfc.co.th - KFC
 
 
 *** Keywords ***
