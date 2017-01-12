@@ -6,9 +6,11 @@ ${URL}  http://www.google.co.th
 ${BROWSER DRIVE}  chrome
 *** Test Cases ***
 Hello Google Search Pizza
+  [Tags]  pizza
   Search Google  Pizza  พิซซ่า
 
 Google Search KFC
+  [Tags]  kfc
   Search Google  KFC  kfc.co.th - KFC
 
 
