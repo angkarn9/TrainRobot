@@ -9,20 +9,21 @@ ${BROWSER DRIVER}  chrome
 *** Test Cases ***
 Login Case Valid
   [Template]  Login Process
-#---UserName---|---Password---#
-    demo            mode
+#---UserName---|---Password---|---Expect---#
+    demo            mode        welcome.html
 
 Login Case Invalid
   [Template]  Login Process
-#---UserName---|---Password---#
-    demo1           mode1
-    454             ooio
-    %lrkst          rtrpot
+#---UserName---|---Password---|---Expect---#
+    demo1           mode1       error.html
+    454             ooio        error.html
+    %lrkst          rtrpot      error.html
 
 *** Keywords ***
 Login Process
-    [Arguments]  ${USERNAME}  ${PASSWORD}
+    [Arguments]  ${username}  ${password}  ${expect}
     Open Browser  ${URL}  ${BROWSER DRIVER}
-    Input Text  username_field  ${USERNAME}
-    Input Text  password_field  ${PASSWORD}
+    Input Text  username_field  ${username}
+    Input Text  password_field  ${password}
     Click Button  login_button
+    Location Should Contain  ${expect}
