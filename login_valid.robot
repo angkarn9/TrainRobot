@@ -17,7 +17,7 @@ Login Case Invalid
 #---UserName---|---Password---|---Expect---#
     demo1           mode1       error.html
     454             ooio        error.html
-    %lrkst          rtrpot      error.html
+    %lrkst          rtrpotw      error.html
 
 *** Keywords ***
 Login Process
